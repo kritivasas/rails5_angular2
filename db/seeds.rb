@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+def dot
+  print '.'
+end
+
+def seed_task(title)
+  Task.find_or_create_by(title: title)
+  dot
+end
+
+seed_task 'Eat'
+seed_task 'Sleep'
+seed_task 'Repeat'
