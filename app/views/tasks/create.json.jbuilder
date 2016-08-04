@@ -1,5 +1,5 @@
 if @save_success
   json.data @task, :id, :title, :link
 else
-  json.errors ['Task not created']
+  json.errors @task.errors.full_messages
 end
